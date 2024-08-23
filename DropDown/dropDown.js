@@ -1,3 +1,5 @@
+import './dropDown.css';
+
 function createDropDown(options, onSelect) {
     const dropdown = document.createElement('div');
     dropdown.className = 'dropdown';
