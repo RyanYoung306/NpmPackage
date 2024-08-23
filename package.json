@@ -1,5 +1,5 @@
 {
-  "name": "PersonalWebModuleTools",
+  "name": "personalwebmoduletools",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,9 +7,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RyanYoung306/NpmPackage"
+    "url": "git+https://github.com/RyanYoung306/NpmPackage.git"
   },
   "author": "Ryan Young <ryanyoung306@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanYoung306/NpmPackage/issues"
+  },
+  "homepage": "https://github.com/RyanYoung306/NpmPackage#readme",
   "description": ""
 }
