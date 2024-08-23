@@ -3,3 +3,4 @@ exports.printMsg = function() {
 }
 
 exports.createDropDown = require('./DropDown/dropDown').createDropDown;
+exports.createImageCarousel = require('./ImageCarousel/imageCarousel').createImageCarousel;
