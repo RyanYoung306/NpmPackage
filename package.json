@@ -1,0 +1,16 @@
+{
+  "name": "npmpackage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monatheoctocat/my_package.git"
+  },
+  "private": true,
+  "author": "Ryan Young <ryanyoung306@gmail.com>",
+  "license": "ISC",
+  "description": ""
+}
