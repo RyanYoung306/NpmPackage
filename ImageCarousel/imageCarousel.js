@@ -1,5 +1,6 @@
 import './imageCarousel.css';
-export function createImageCarousel (images) {
+
+export function createImageCarousel(images, source) {
     const carousel = document.createElement('div');
     carousel.className = 'carousel';
 
@@ -10,6 +11,14 @@ export function createImageCarousel (images) {
     const buttons = document.createElement('div');
     buttons.className = 'buttons';
     carousel.appendChild(buttons);
+
+    const sourceButton = document.createElement('button');
+    sourceButton.className = 'source-button';
+    sourceButton.textContent = 'Source';
+    sourceButton.addEventListener('click', () => {
+        window.open(source);
+    });
+    carousel.appendChild(sourceButton);
 
     images.forEach((imageSrc, index) => {
         const button = document.createElement('button');
