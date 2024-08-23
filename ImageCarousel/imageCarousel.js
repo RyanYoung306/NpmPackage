@@ -15,14 +15,35 @@ export function createImageCarousel(images, sources) {
     const sourceButton = document.createElement('button');
     sourceButton.className = 'source-button';
     sourceButton.textContent = 'Source';
+    sourceButton.addEventListener('click', () => {
+        window.open(sources[0]);
+    });
     carousel.appendChild(sourceButton);
+
+    let currentIndex = 0;
+
+    const updateCarousel = (index) => {
+        image.src = images[index];
+        sourceButton.onclick = () => window.open(sources[index]);
+    };
+
+    const startAutoSlide = () => {
+        return setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateCarousel(currentIndex);
+        }, 5000);
+    };
+
+    let autoSlideInterval = startAutoSlide();
 
     images.forEach((imageSrc, index) => {
         const button = document.createElement('button');
         button.textContent = index + 1;
         button.addEventListener('click', () => {
-            image.src = imageSrc;
-            sourceButton.onclick = () => window.open(sources[index]);
+            clearInterval(autoSlideInterval);
+            currentIndex = index;
+            updateCarousel(currentIndex);
+            autoSlideInterval = startAutoSlide();
         });
         buttons.appendChild(button);
     });
