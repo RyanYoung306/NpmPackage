@@ -1,6 +1,6 @@
 import './dropDown.css';
 
-function createDropDown(options, onSelect) {
+export function createDropDown(options, onSelect) {
     const dropdown = document.createElement('div');
     dropdown.className = 'dropdown';
 
@@ -29,5 +29,3 @@ function createDropDown(options, onSelect) {
 
     return dropdown;
 }
-
-module.exports = { createDropDown };
