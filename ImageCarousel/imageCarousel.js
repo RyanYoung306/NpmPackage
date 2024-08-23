@@ -15,9 +15,6 @@ export function createImageCarousel(images, sources) {
     const sourceButton = document.createElement('button');
     sourceButton.className = 'source-button';
     sourceButton.textContent = 'Source';
-    sourceButton.addEventListener('click', () => {
-        window.open(sources[0]);
-    });
     carousel.appendChild(sourceButton);
 
     let currentIndex = 0;
